@@ -48,4 +48,14 @@ public class RulesOf6005Test {
         assertFalse(RulesOf6005.mayUseCodeInAssignment(
                 false, false, false, true, false));
     }
+    
+    @Test
+    public void testOwnCodeAllowedEvenWhenImplementationRequired() {
+        assertTrue(RulesOf6005.mayUseCodeInAssignment(
+                true,
+                false,
+                false,
+                false,
+                true));
+    }
 }
