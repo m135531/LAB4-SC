@@ -1,0 +1,47 @@
+SE-314 LAB 04 - GIT COMMAND CHECKLIST
+
+# Verify installation
+git --version
+
+# If starting from downloaded starter code
+git init
+
+# OR if your instructor gives you a repository URL
+git clone <YOUR-REPOSITORY-URL>
+cd <YOUR-REPOSITORY-FOLDER>
+
+# Inspect work
+git status
+git diff
+
+# Stage changes
+git add src/rules/RulesOf6005.java
+git add test/rules/RulesOf6005Test.java
+git status
+git diff --staged
+
+# Commit
+git commit -m "Implement collaboration policy and add JUnit tests"
+
+# Inspect history
+git log --oneline --graph --decorate --all
+
+# Branch practice required by the rubric
+git switch -c junit-extra-tests
+# make/save a small test change if needed
+git add .
+git commit -m "Add extra policy test coverage"
+git switch master
+# If your default branch is main, use: git switch main
+git merge junit-extra-tests
+
+# Remote/push (replace with your real remote)
+git remote -v
+git push -u origin master
+# If your repository uses main, use: git push -u origin main
+
+# Useful additional practice
+git branch
+git log --oneline
+git show
+git diff HEAD~1 HEAD
